@@ -3,7 +3,7 @@ export const wrapPromise = (promise) => {
 
   let result;
 
-  let suspender = promise
+  const suspender = promise
     .then((res) => res.json())
     .then((data) => {
       status = 'success';
